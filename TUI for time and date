@@ -1,12 +1,10 @@
 #!/bin/sh
 
-
 FILE1=/tmp/Assignment_timezone-$$
 FILE2=/tmp/Assignment_timezone-$$
 FILE3=/tmp/Assignment_timezone-$$
 
 DIALOG=${DIALOG=dialog}
-
 
 $DIALOG --title " Timezone" --clear \
        \
@@ -16,5 +14,6 @@ now1=$(export TZ=`cat /tmp/input.$$`;date)
 
 
 MSG="Time is:  $now1 \n\nContinue?"
-		$DIALOG --yesno "$MSG" 7 20 || end
+		$DIALOG --yesno "$MSG" 25 59 || end
+
 
